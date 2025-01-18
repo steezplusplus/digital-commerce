@@ -7,8 +7,6 @@ import { SearchModalDisclosure } from '@/components/layout/navbar/search-modal-d
 import { getCategories, getStore } from '@/lib/api';
 import { NavLinks } from './nav-links';
 
-// TODO: Navbar loading UI
-
 export async function Navbar() {
   const store = await getStore();
   const categories = await getCategories();

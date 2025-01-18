@@ -13,7 +13,7 @@ export type CategoryPageProps = {
   }>;
 };
 
-export async function generateMetadata(props: { params: Promise<{ category: string }> }): Promise<Metadata> {
+export async function generateMetadata(props: CategoryPageProps): Promise<Metadata> {
   const params = await props.params;
   const category = await getCategory({ name: params.category });
   return {
