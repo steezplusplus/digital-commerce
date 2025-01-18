@@ -1,6 +1,8 @@
+import { Suspense } from 'react';
+
 import { CheckoutLink } from '@/components/cart/checkout-link';
 import { NavLogo } from '@/components/layout/navbar/nav-logo';
-import { ProductSearch } from '@/components/layout/navbar/product-search';
+import { ProductSearch, ProductSearchSkeleton } from '@/components/layout/navbar/product-search';
 import { SearchModalDisclosure } from '@/components/layout/navbar/search-modal-disclosure';
 import { getCategories, getStore } from '@/lib/api';
 import { NavLinks } from './nav-links';
@@ -29,7 +31,9 @@ export async function Navbar() {
 
         {/* Desktop & Laptop search */}
         <div className="hidden justify-center md:flex md:w-1/3">
-          <ProductSearch />
+          <Suspense fallback={<ProductSearchSkeleton />}>
+            <ProductSearch />
+          </Suspense>
         </div>
 
         {/* Checkout Link */}
