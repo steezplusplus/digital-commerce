@@ -25,26 +25,14 @@ function GalleryTab({ colors }: { colors: Color[] }) {
         return (
           <Tab
             key={color.id}
-            className="
-              relative
-              flex
-              aspect-square
-              cursor-pointer
-              items-center
-              justify-center
-              rounded-md
-              bg-gray-100
-              dark:bg-gray-700
-            "
+            className="relative flex aspect-square cursor-pointer items-center justify-center rounded-md bg-gray-100 dark:bg-gray-700"
           >
             {({ selected }) => (
               <div>
                 <span
-                  className={`
-                    absolute inset-0 aspect-square h-full w-full overflow-hidden rounded-md
-                    bg-gray-200 dark:bg-gray-600
-                    ${selected ? 'ring-2 ring-offset-1' : ''}
-                  `}
+                  className={`absolute inset-0 aspect-square h-full w-full overflow-hidden rounded-md bg-gray-200 dark:bg-gray-600 ${
+                    selected ? 'ring-2 ring-offset-1' : ''
+                  } `}
                 >
                   <Image
                     fill

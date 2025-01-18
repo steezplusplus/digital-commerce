@@ -49,19 +49,26 @@ export function ProductSearch(props: SearchProps) {
         id={searchId}
         autoComplete="off"
         defaultValue={params?.get('q') || ''}
-        className="
-          w-full
-          rounded-md
-          border
-          border-neutral-200
-          bg-white
-          py-2
-          pl-8
-          pr-4
-          text-sm
-          dark:border-neutral-800
-          dark:bg-transparent
-        "
+        className="w-full rounded-md border border-neutral-200 bg-white py-2 pl-8 pr-4 text-sm dark:border-neutral-800 dark:bg-transparent"
+      />
+      <SearchIcon size="16" color="gray" className="absolute left-2 top-2.5" />
+    </form>
+  );
+}
+
+export function ProductSearchSkeleton() {
+  return (
+    <form className="relative">
+      <label className="sr-only" htmlFor={searchId}>
+        Search products
+      </label>
+      <input
+        placeholder="Search products..."
+        type="text"
+        name="search"
+        id={searchId}
+        autoComplete="off"
+        className="w-full rounded-md border border-neutral-200 bg-white py-2 pl-8 pr-4 text-sm dark:border-neutral-800 dark:bg-transparent"
       />
       <SearchIcon size="16" color="gray" className="absolute left-2 top-2.5" />
     </form>

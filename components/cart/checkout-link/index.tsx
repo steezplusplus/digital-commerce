@@ -27,20 +27,7 @@ export function CheckoutLink() {
   return (
     <Link
       href="/checkout"
-      className="
-        flex
-        items-center
-        rounded-md
-        border
-        border-neutral-200
-        bg-white
-        p-2
-        transition
-        duration-300
-        hover:opacity-75
-        dark:border-neutral-800
-        dark:bg-transparent
-      "
+      className="flex items-center rounded-md border border-neutral-200 bg-white p-2 transition duration-300 hover:opacity-75 dark:border-neutral-800 dark:bg-transparent"
     >
       <ShoppingBag size="18" />
       <span className="ml-2 text-xs font-medium dark:text-white">{cart.products.length}</span>

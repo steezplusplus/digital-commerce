@@ -8,13 +8,7 @@ export function ProductImage({ product }: { product: ProductWithColor }) {
   const featuredImage = colors[0];
 
   return (
-    <div
-      className="
-        group/image relative aspect-square 
-        rounded-md bg-gray-100
-        dark:bg-gray-700
-      "
-    >
+    <div className="group/image relative aspect-square rounded-md bg-gray-100 dark:bg-gray-700">
       <Image
         fill
         alt={featuredImage?.altText || ''}

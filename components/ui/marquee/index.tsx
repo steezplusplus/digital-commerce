@@ -3,15 +3,7 @@ import { ProductWithColor } from '@/lib/api';
 
 export function SlowMarquee({ products }: { products: ProductWithColor[] }) {
   return (
-    <article
-      className="
-        pause-animations-on-hover
-        flex
-        w-full
-        overflow-hidden
-        whitespace-nowrap
-      "
-    >
+    <article className="pause-animations-on-hover flex w-full overflow-hidden whitespace-nowrap">
       <div className="relative">
         <ul className="flex motion-safe:animate-marquee-slow">
           {products.map((product) => {
@@ -30,15 +22,7 @@ export function SlowMarquee({ products }: { products: ProductWithColor[] }) {
 
 export function FastMarquee({ products }: { products: ProductWithColor[] }) {
   return (
-    <article
-      className="
-        pause-animations-on-hover
-        flex
-        w-full
-        overflow-hidden
-        whitespace-nowrap
-      "
-    >
+    <article className="pause-animations-on-hover flex w-full overflow-hidden whitespace-nowrap">
       <div className="relative">
         <ul className="flex motion-safe:animate-marquee-fast">
           {products.map((product) => {

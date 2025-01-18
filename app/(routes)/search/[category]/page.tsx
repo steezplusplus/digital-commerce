@@ -5,15 +5,16 @@ import { getCategory, getCategoryPage } from '@/lib/api';
 import { sorting } from '@/lib/constants';
 
 export type CategoryPageProps = {
-  params: {
+  params: Promise<{
     category: string;
-  };
-  searchParams?: {
+  }>;
+  searchParams?: Promise<{
     [key: string]: string | string[] | undefined;
-  };
+  }>;
 };
 
-export async function generateMetadata({ params }: { params: { category: string } }): Promise<Metadata> {
+export async function generateMetadata(props: CategoryPageProps): Promise<Metadata> {
+  const params = await props.params;
   const category = await getCategory({ name: params.category });
   return {
     title: category.name,
@@ -23,11 +24,12 @@ export async function generateMetadata({ params }: { params: { category: string 
 export default async function CategoryPage(props: CategoryPageProps) {
   const { params, searchParams } = props;
 
-  const { sort } = searchParams as { [key: string]: string };
+  const { category: categoryParam } = await params;
+  const { sort } = (await searchParams) as { [key: string]: string };
   const selectedSort = sorting.find((item) => item.slug === sort);
 
   const category = await getCategoryPage({
-    name: params.category,
+    name: categoryParam,
     sortKey: selectedSort?.sortKey,
     order: selectedSort?.order,
   });

@@ -8,12 +8,13 @@ export const metadata = {
 };
 
 export type SearchPageProps = {
-  searchParams?: {
+  searchParams?: Promise<{
     [key: string]: string | string[] | undefined;
-  };
+  }>;
 };
 
-export default async function SearchPage({ searchParams }: SearchPageProps) {
+export default async function SearchPage(props: SearchPageProps) {
+  const searchParams = await props.searchParams;
   const { q: searchValue, sort } = searchParams as { [key: string]: string };
 
   const selectedSort = sorting.find((item) => item.slug === sort);

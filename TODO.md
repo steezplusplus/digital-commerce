@@ -25,6 +25,10 @@
 - Remake Product Form Radio with HeadlessUI RadioGroup
 - Remake ReactHotToast with HeadlessUI Popover
 
+# Next 15 updates
+
+- Do I still need to use useEffect to stop SSR?
+
 # Finalizations
 
 - Manual A11y testing

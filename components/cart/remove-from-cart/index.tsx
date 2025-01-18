@@ -18,18 +18,7 @@ export function RemoveFromCart({ inventoryId }: RemoveFromCartProps) {
 
   return (
     <button
-      className="
-        w-auto
-        rounded-md
-        border
-        border-neutral-200
-        bg-white
-        p-1
-        transition
-        hover:opacity-75
-        dark:border-neutral-800
-        dark:bg-transparent
-      "
+      className="w-auto rounded-md border border-neutral-200 bg-white p-1 transition hover:opacity-75 dark:border-neutral-800 dark:bg-transparent"
       onClick={removeProduct}
     >
       <X size="18" />

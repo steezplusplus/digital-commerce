@@ -18,29 +18,8 @@ export function ProductForm({
   const newInventory = product.inventory.find((inv) => inv.colorId === newColor?.id && inv.sizeId === newSize?.id);
 
   return (
-    <div
-      className="
-        rounded-md
-        border
-        border-neutral-200
-        bg-white
-        px-4
-        py-6
-        dark:border-neutral-800
-        dark:bg-transparent
-      "
-    >
-      <h2
-        className="
-          mb-3
-          border-b
-          border-neutral-200
-          pb-4
-          text-4xl
-          font-semibold
-          dark:border-neutral-800
-        "
-      >
+    <div className="rounded-md border border-neutral-200 bg-white px-4 py-6 dark:border-neutral-800 dark:bg-transparent">
+      <h2 className="mb-3 border-b border-neutral-200 pb-4 text-4xl font-semibold dark:border-neutral-800">
         {product.name}
       </h2>
       <ColorSelection colors={product.colors} />

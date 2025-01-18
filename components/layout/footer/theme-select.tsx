@@ -27,16 +27,7 @@ export function ThemeSelect() {
     <label>
       <div className="mb-1">Theme</div>
       <select
-        className="
-          rounded-md
-          border
-          border-neutral-200
-          bg-white
-          p-2
-          text-xs
-          dark:border-neutral-800
-          dark:bg-transparent
-        "
+        className="rounded-md border border-neutral-200 bg-white p-2 text-xs dark:border-neutral-800 dark:bg-transparent"
         value={theme}
         onChange={(e) => setTheme(e.target.value)}
       >
