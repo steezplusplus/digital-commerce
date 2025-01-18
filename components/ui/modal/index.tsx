@@ -48,17 +48,7 @@ export function Modal(props: ModalProps) {
                 <div className="mt-2">{children}</div>
                 <div className="mt-4">
                   <button
-                    className={`
-                      w-full
-                      rounded-md
-                      border
-                      px-2
-                      py-1
-                      text-sm
-                      tracking-widest
-                      transition
-                      hover:opacity-75
-                    `}
+                    className={`w-full rounded-md border px-2 py-1 text-sm tracking-widest transition hover:opacity-75`}
                     onClick={onClose}
                   >
                     Close

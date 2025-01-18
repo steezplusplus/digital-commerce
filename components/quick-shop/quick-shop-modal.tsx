@@ -45,24 +45,7 @@ function ProductModalInfo({ product }: { product: ProductWithColor }) {
 function ProductModalLink({ slug, onClose }: { slug: string; onClose: () => void }) {
   return (
     <Link
-      className=" 
-        mt-4
-        flex
-        w-full
-        justify-center
-        rounded-md
-        border
-        bg-neutral-900
-        px-2
-        py-1
-        text-sm
-        tracking-widest
-        text-white
-        transition
-        hover:opacity-75
-        dark:bg-neutral-50
-        dark:text-black
-      "
+      className="mt-4 flex w-full justify-center rounded-md border bg-neutral-900 px-2 py-1 text-sm tracking-widest text-white transition hover:opacity-75 dark:bg-neutral-50 dark:text-black"
       href={`/product/${slug}`}
       onClick={() => onClose()}
     >

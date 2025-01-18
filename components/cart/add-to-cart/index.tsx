@@ -54,21 +54,7 @@ export function AddToCart(props: AddToCartProps) {
   return (
     <button
       onClick={validateCart}
-      className="
-        w-full
-        rounded-md
-        border
-        border-neutral-200
-        bg-white
-        px-2
-        py-1
-        text-lg
-        tracking-widest
-        transition
-        hover:opacity-75
-        dark:border-neutral-800
-        dark:bg-transparent
-      "
+      className="w-full rounded-md border border-neutral-200 bg-white px-2 py-1 text-lg tracking-widest transition hover:opacity-75 dark:border-neutral-800 dark:bg-transparent"
     >
       Add To Cart
     </button>

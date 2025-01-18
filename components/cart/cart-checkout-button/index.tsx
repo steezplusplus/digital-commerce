@@ -16,18 +16,7 @@ export function CartCheckoutButton() {
   }, []);
 
   if (!isMounted) {
-    return (
-      <div
-        className="
-          h-[34px]
-          w-full
-          animate-pulse
-          rounded-md
-          bg-gray-100
-          dark:bg-gray-700
-        "
-      />
-    );
+    return <div className="h-[34px] w-full animate-pulse rounded-md bg-gray-100 dark:bg-gray-700" />;
   }
 
   const handleCheckout = () => {
@@ -40,19 +29,7 @@ export function CartCheckoutButton() {
 
   return (
     <button
-      className="
-        disabled:cursor-opacity-50
-        w-full
-        rounded-md
-        border
-        px-2
-        py-1
-        text-xl
-        tracking-widest
-        transition
-        hover:opacity-75
-        disabled:cursor-not-allowed
-      "
+      className="disabled:cursor-opacity-50 w-full rounded-md border px-2 py-1 text-xl tracking-widest transition hover:opacity-75 disabled:cursor-not-allowed"
       onClick={handleCheckout}
     >
       Checkout

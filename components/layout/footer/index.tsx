@@ -9,19 +9,7 @@ export async function Footer() {
   const categories = await getCategories();
 
   return (
-    <footer
-      className="
-        flex
-        flex-col
-        gap-6
-        border-t 
-        border-neutral-200
-        p-4
-        dark:border-neutral-800
-        md:flex-row 
-        md:gap-12
-      "
-    >
+    <footer className="flex flex-col gap-6 border-t border-neutral-200 p-4 dark:border-neutral-800 md:flex-row md:gap-12">
       <FooterLogo storeName={store.name} />
       <FooterMenu categories={categories} />
       <ThemeSelect />

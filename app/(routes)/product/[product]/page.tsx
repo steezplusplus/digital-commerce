@@ -39,18 +39,7 @@ export default async function ProductPage(props: ProductPageProps) {
   return (
     <Container className="px-4 pb-4">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <div
-          className="
-            bottom-0
-            flex
-            flex-col
-            justify-center
-            self-start
-            md:sticky
-            md:top-10
-            md:aspect-square
-          "
-        >
+        <div className="bottom-0 flex flex-col justify-center self-start md:sticky md:top-10 md:aspect-square">
           <ProductForm product={product} selectedColor={selectedColor} selectedSize={selectedSize} />
         </div>
         <Gallery colors={product.colors} />
